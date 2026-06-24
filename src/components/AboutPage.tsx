@@ -34,7 +34,7 @@ export default function AboutPage({ members }: Props) {
             position: 'relative',
             maxWidth: 1000,
             margin: '0 auto',
-            padding: '72px 40px 64px',
+            padding: 'clamp(48px, 9vw, 72px) clamp(20px, 5vw, 40px) clamp(44px, 8vw, 64px)',
           }}
         >
           <FleuronLabel color="brass" mb={18}>About · 소개</FleuronLabel>
@@ -42,7 +42,7 @@ export default function AboutPage({ members }: Props) {
             style={{
               fontFamily: 'var(--font-serif-kr)',
               fontWeight: 800,
-              fontSize: 52,
+              fontSize: 'clamp(34px, 7vw, 52px)',
               lineHeight: 1.15,
               letterSpacing: '-.02em',
               margin: '0 0 18px',
@@ -53,7 +53,7 @@ export default function AboutPage({ members }: Props) {
           </h1>
           <p
             style={{
-              fontSize: 18,
+              fontSize: 'clamp(15px, 2.2vw, 18px)',
               lineHeight: 1.7,
               color: 'var(--text-on-dark-muted)',
               maxWidth: 600,
@@ -68,12 +68,12 @@ export default function AboutPage({ members }: Props) {
 
       {/* 소개 텍스트 */}
       <section
+        className="vss-about-intro"
         style={{
           maxWidth: 1000,
           margin: '0 auto',
-          padding: '72px 40px 16px',
+          padding: 'clamp(48px, 8vw, 72px) clamp(20px, 5vw, 40px) 16px',
           display: 'grid',
-          gridTemplateColumns: '200px 1fr',
           gap: 48,
           alignItems: 'start',
         }}
@@ -106,12 +106,12 @@ export default function AboutPage({ members }: Props) {
       </section>
 
       {/* 학회장 인삿말 */}
-      <section style={{ maxWidth: 1000, margin: '0 auto', padding: '48px 40px 24px' }}>
+      <section style={{ maxWidth: 1000, margin: '0 auto', padding: 'clamp(32px, 6vw, 48px) clamp(20px, 5vw, 40px) 24px' }}>
         <Card variant="seal">
           <div
+            className="vss-greeting-grid"
             style={{
               display: 'grid',
-              gridTemplateColumns: '240px 1fr',
               gap: 40,
               alignItems: 'start',
               padding: '8px 6px',
@@ -146,7 +146,7 @@ export default function AboutPage({ members }: Props) {
               <Badge variant="degree">{president.degree}</Badge>
             </div>
 
-            <div style={{ borderLeft: '1px solid var(--border-hairline)', paddingLeft: 40 }}>
+            <div className="vss-greeting-body">
               <Image
                 src={asset('/assets/fleuron.svg')}
                 alt=""
@@ -208,8 +208,8 @@ export default function AboutPage({ members }: Props) {
       </section>
 
       {/* 원칙 */}
-      <section style={{ maxWidth: 1000, margin: '0 auto', padding: '40px 40px 80px' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 20 }}>
+      <section style={{ maxWidth: 1000, margin: '0 auto', padding: 'clamp(32px, 6vw, 40px) clamp(20px, 5vw, 40px) clamp(56px, 9vw, 80px)' }}>
+        <div className="vss-card-grid" style={{ display: 'grid', gap: 20 }}>
           {PRINCIPLES.map((p) => (
             <PrincipleCard key={p.no} no={p.no} title={p.title} body={p.body} />
           ))}

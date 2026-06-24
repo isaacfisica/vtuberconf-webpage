@@ -146,7 +146,7 @@ export function ManifestoBand({ quote, source }: { quote: string; source: string
         style={{
           maxWidth: 880,
           margin: '0 auto',
-          padding: '80px 40px',
+          padding: 'clamp(52px, 9vw, 80px) clamp(20px, 5vw, 40px)',
           textAlign: 'center',
         }}
       >
@@ -162,7 +162,7 @@ export function ManifestoBand({ quote, source }: { quote: string; source: string
           style={{
             fontFamily: 'var(--font-serif-kr)',
             fontWeight: 400,
-            fontSize: 28,
+            fontSize: 'clamp(20px, 3.4vw, 28px)',
             lineHeight: 1.6,
             margin: 0,
             color: '#fff',

@@ -10,7 +10,7 @@ export default function SiteFooter() {
       style={{
         background: 'var(--surface-ink)',
         color: 'var(--text-on-dark-muted)',
-        padding: '48px 40px 36px',
+        padding: '48px clamp(20px, 5vw, 40px) 36px',
       }}
     >
       <div style={{ maxWidth: 1080, margin: '0 auto' }}>

@@ -43,7 +43,7 @@ export default function ProfilePage({ member: m, members }: Props) {
           position: 'relative',
           background: 'var(--surface-ink)',
           overflow: 'hidden',
-          padding: '24px 40px 0',
+          padding: '24px clamp(20px, 5vw, 40px) 0',
         }}
       >
         <RadialGlow color="violet" size={380} style={{ right: '6%', top: -160 }} />
@@ -82,7 +82,7 @@ export default function ProfilePage({ member: m, members }: Props) {
                 style={{
                   fontFamily: 'var(--font-serif-kr)',
                   fontWeight: 800,
-                  fontSize: 38,
+                  fontSize: 'clamp(28px, 6vw, 38px)',
                   margin: '0 0 8px',
                   color: 'var(--text-on-dark)',
                 }}
@@ -124,12 +124,12 @@ export default function ProfilePage({ member: m, members }: Props) {
 
       {/* Body */}
       <div
+        className="vss-profile-grid"
         style={{
           maxWidth: 1000,
           margin: '0 auto',
-          padding: '36px 40px 80px',
+          padding: '36px clamp(20px, 5vw, 40px) 80px',
           display: 'grid',
-          gridTemplateColumns: '1fr 320px',
           gap: 40,
           alignItems: 'start',
         }}
@@ -208,7 +208,7 @@ export default function ProfilePage({ member: m, members }: Props) {
         </div>
 
         {/* Sidebar */}
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 16, position: 'sticky', top: 88 }}>
+        <div className="vss-profile-sidebar" style={{ display: 'flex', flexDirection: 'column', gap: 16, position: 'sticky', top: 88 }}>
           {/* 학위 인증 */}
           <Card variant="seal" title="전공 · 학위 인증">
             <div style={{ display: 'flex', flexDirection: 'column', gap: 11, fontSize: 13.5 }}>

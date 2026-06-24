@@ -53,7 +53,7 @@ export default function HomePage({ members }: Props) {
             position: 'relative',
             maxWidth: 1080,
             margin: '0 auto',
-            padding: '92px 40px 84px',
+            padding: 'clamp(56px, 10vw, 92px) clamp(20px, 5vw, 40px) clamp(52px, 9vw, 84px)',
           }}
         >
           <FleuronLabel color="brass" mb={22}>Virtual Scholars Society · est. 2026</FleuronLabel>
@@ -62,7 +62,7 @@ export default function HomePage({ members }: Props) {
             style={{
               fontFamily: 'var(--font-serif-kr)',
               fontWeight: 800,
-              fontSize: 64,
+              fontSize: 'clamp(40px, 9vw, 64px)',
               lineHeight: 1.12,
               letterSpacing: '-.02em',
               color: 'var(--text-on-dark)',
@@ -77,7 +77,7 @@ export default function HomePage({ members }: Props) {
 
           <p
             style={{
-              fontSize: 19,
+              fontSize: 'clamp(16px, 2.4vw, 19px)',
               lineHeight: 1.65,
               color: 'var(--text-on-dark-muted)',
               maxWidth: 560,
@@ -107,7 +107,7 @@ export default function HomePage({ members }: Props) {
       </section>
 
       {/* Featured Fellows */}
-      <section style={{ maxWidth: 1080, margin: '0 auto', padding: '72px 40px' }}>
+      <section style={{ maxWidth: 1080, margin: '0 auto', padding: 'clamp(48px, 8vw, 72px) clamp(20px, 5vw, 40px)' }}>
         <SectionHeader
           eyebrow="Fellows · 정회원"
           title="이번 학기의 회원"
@@ -118,9 +118,9 @@ export default function HomePage({ members }: Props) {
           }
         />
         <div
+          className="vss-card-grid"
           style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(3, 1fr)',
             gap: 20,
           }}
         >

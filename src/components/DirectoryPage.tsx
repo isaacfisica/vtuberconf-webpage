@@ -30,13 +30,13 @@ export default function DirectoryPage({ members }: Props) {
   });
 
   return (
-    <div style={{ maxWidth: 1080, margin: '0 auto', padding: '56px 40px 80px' }}>
+    <div style={{ maxWidth: 1080, margin: '0 auto', padding: 'clamp(40px, 7vw, 56px) clamp(20px, 5vw, 40px) clamp(56px, 9vw, 80px)' }}>
       <EyebrowLabel mb={10}>Directory · 회원 명부</EyebrowLabel>
       <h1
         style={{
           fontFamily: 'var(--font-serif-kr)',
           fontWeight: 800,
-          fontSize: 44,
+          fontSize: 'clamp(30px, 6vw, 44px)',
           margin: '0 0 8px',
           color: 'var(--ink-900)',
         }}
@@ -65,10 +65,10 @@ export default function DirectoryPage({ members }: Props) {
           marginBottom: 8,
         }}
       >
-        <div style={{ flex: '1 1 380px', minWidth: 0 }}>
+        <div className="vss-scroll-x" style={{ flex: '1 1 320px', minWidth: 0 }}>
           <Tabs items={tabItems} value={field} onChange={setField} />
         </div>
-        <div style={{ width: 260 }}>
+        <div style={{ flex: '1 1 220px', maxWidth: 320 }}>
           <Input
             placeholder="이름 · 전공 검색"
             value={query}
@@ -78,9 +78,9 @@ export default function DirectoryPage({ members }: Props) {
       </div>
 
       <div
+        className="vss-card-grid"
         style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(3,1fr)',
           gap: 20,
           marginTop: 24,
         }}

@@ -183,3 +183,75 @@ a { color: var(--text-link); text-decoration: none; }
   0%, 100% { opacity: 1; transform: scale(1); }
   50% { opacity: 0.35; transform: scale(0.7); }
 }
+
+/* ============================================================
+   Responsive layout
+   ============================================================ */
+
+/* Prevent any oversized media/element from forcing horizontal scroll */
+img,
+svg,
+video {
+  max-width: 100%;
+}
+
+/* Card grids: reflow column count to fit the viewport. The min() keeps a
+   single card from overflowing on very narrow phones. */
+.vss-card-grid {
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 248px), 1fr));
+}
+
+/* Profile body: main column + fixed sidebar → stack on narrow viewports. */
+.vss-profile-grid {
+  grid-template-columns: 1fr 320px;
+}
+@media (max-width: 860px) {
+  .vss-profile-grid {
+    grid-template-columns: 1fr;
+  }
+  /* Sidebar should no longer stick once it sits below the main content. */
+  .vss-profile-sidebar {
+    position: static !important;
+  }
+}
+
+/* About intro: label rail + body → stack. */
+.vss-about-intro {
+  grid-template-columns: 200px 1fr;
+}
+@media (max-width: 720px) {
+  .vss-about-intro {
+    grid-template-columns: 1fr;
+    gap: 18px !important;
+  }
+}
+
+/* Greeting card: portrait rail + letter → stack, dropping the left divider. */
+.vss-greeting-grid {
+  grid-template-columns: 240px 1fr;
+}
+.vss-greeting-body {
+  border-left: 1px solid var(--border-hairline);
+  padding-left: 40px;
+}
+@media (max-width: 720px) {
+  .vss-greeting-grid {
+    grid-template-columns: 1fr;
+    gap: 28px !important;
+  }
+  .vss-greeting-body {
+    border-left: 0;
+    padding-left: 0;
+    border-top: 1px solid var(--border-hairline);
+    padding-top: 28px;
+  }
+}
+
+/* Horizontally scrollable tab rail when fields overflow the row. */
+.vss-scroll-x {
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.vss-scroll-x::-webkit-scrollbar {
+  display: none;
+}

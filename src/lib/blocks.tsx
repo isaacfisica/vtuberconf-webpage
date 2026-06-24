@@ -58,7 +58,7 @@ export function SectionHeader({
           style={{
             fontFamily: 'var(--font-serif-kr)',
             fontWeight: 800,
-            fontSize: titleSize,
+            fontSize: `clamp(${Math.round(titleSize * 0.62)}px, 6vw, ${titleSize}px)`,
             margin: 0,
             color: 'var(--ink-900)',
           }}
