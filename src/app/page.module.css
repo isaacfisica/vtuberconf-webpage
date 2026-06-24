@@ -1,0 +1,265 @@
+.page {
+  width: min(1120px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 2rem 0 4rem;
+  display: grid;
+  gap: 1.5rem;
+  font-family: var(--font-geist-sans);
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.3fr 0.9fr;
+  gap: 1.25rem;
+  align-items: stretch;
+  padding: clamp(1.25rem, 1rem + 2vw, 2rem);
+  border-radius: 2rem;
+}
+
+.heroCopy,
+.heroPanel,
+.ctaBand,
+.timelineItem,
+.statItem {
+  border: 1px solid var(--line);
+  background: var(--surface);
+  backdrop-filter: blur(14px);
+  box-shadow: var(--shadow);
+}
+
+.heroCopy {
+  display: grid;
+  gap: 1.25rem;
+  padding: clamp(1.5rem, 1rem + 2vw, 2.5rem);
+  border-radius: 2rem;
+}
+
+.kicker,
+.panelLabel {
+  color: var(--accent-strong);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.heroCopy h1 {
+  max-width: 12ch;
+  font-size: clamp(3rem, 2.2rem + 4vw, 6rem);
+  line-height: 0.95;
+  letter-spacing: -0.08em;
+  text-wrap: balance;
+}
+
+.lead {
+  max-width: 48rem;
+  color: var(--muted);
+  line-height: 1.8;
+  font-size: 1.02rem;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.primaryAction,
+.secondaryAction,
+.bandAction {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3rem;
+  padding: 0.85rem 1.2rem;
+  border-radius: 999px;
+  font-weight: 700;
+  transition: transform 180ms ease, background-color 180ms ease, border-color 180ms ease;
+}
+
+.primaryAction,
+.bandAction {
+  background: var(--accent);
+  color: white;
+}
+
+.secondaryAction {
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.statItem {
+  display: grid;
+  gap: 0.35rem;
+  padding: 1rem;
+  border-radius: 1.25rem;
+}
+
+.statItem dt {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.statItem dd {
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+
+.heroPanel {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  border-radius: 2rem;
+  padding: 1.25rem;
+  gap: 1rem;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.55)),
+    radial-gradient(circle at top right, rgba(182, 64, 47, 0.16), transparent 38%);
+}
+
+.heroPanelHeader,
+.heroPanelFooter {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.heroPanelBody {
+  display: grid;
+  align-content: center;
+  gap: 0.85rem;
+}
+
+.heroPanelBody h2 {
+  font-size: clamp(1.8rem, 1.3rem + 2vw, 3rem);
+  line-height: 1.05;
+  letter-spacing: -0.05em;
+  max-width: 10ch;
+}
+
+.heroPanelBody p {
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.section {
+  padding: 0 0.5rem;
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.timeline {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.timelineItem {
+  display: grid;
+  grid-template-columns: 7rem 1fr;
+  gap: 1.2rem;
+  padding: 1.2rem 1.25rem;
+  border-radius: 1.4rem;
+}
+
+.timelineTime {
+  font-weight: 800;
+  color: var(--accent-strong);
+  letter-spacing: 0.04em;
+}
+
+.timelineItem h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.35rem;
+}
+
+.timelineItem p {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.ctaBand {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  padding: 1.5rem;
+  border-radius: 1.75rem;
+}
+
+.ctaBand h2 {
+  font-size: clamp(1.5rem, 1.1rem + 1.6vw, 2.4rem);
+  line-height: 1.1;
+  letter-spacing: -0.05em;
+  max-width: 18ch;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .primaryAction:hover,
+  .bandAction:hover {
+    background: var(--accent-strong);
+    transform: translateY(-1px);
+  }
+
+  .secondaryAction:hover {
+    background: rgba(255, 255, 255, 0.86);
+    transform: translateY(-1px);
+  }
+}
+
+@media (max-width: 900px) {
+  .hero,
+  .cardGrid,
+  .ctaBand {
+    grid-template-columns: 1fr;
+  }
+
+  .hero,
+  .ctaBand {
+    display: grid;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .timelineItem {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .page {
+    width: min(100% - 1rem, 1120px);
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+  }
+
+  .heroCopy h1 {
+    max-width: 11ch;
+  }
+
+  .heroPanelHeader,
+  .heroPanelFooter,
+  .ctaBand {
+    gap: 0.5rem;
+  }
+
+  .heroPanelHeader,
+  .heroPanelFooter,
+  .ctaBand {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" role="img" aria-label="버튜버학회 — Virtual Scholars Society seal">
+  <defs>
+    <path id="seal-top" d="M 30,100 A 70,70 0 0 1 170,100"></path>
+    <path id="seal-bot" d="M 28,100 A 72,72 0 0 0 172,100"></path>
+  </defs>
+
+  
+  <circle cx="100" cy="100" r="97" stroke="#14152b" stroke-width="2"></circle>
+  <circle cx="100" cy="100" r="89" stroke="#bf9b53" stroke-width="1"></circle>
+  <circle cx="100" cy="100" r="55" stroke="#bf9b53" stroke-width="0.75"></circle>
+
+  
+  <g fill="#14152b" font-family="&#39;Spectral&#39;,&#39;Nanum Myeongjo&#39;,serif">
+    <text font-size="20" font-weight="700" letter-spacing="6">
+      <textPath href="#seal-top" startOffset="50%" text-anchor="middle">버튜버학회</textPath>
+    </text>
+    <text font-size="10" font-weight="600" letter-spacing="2.1">
+      <textPath href="#seal-bot" startOffset="50%" text-anchor="middle">VIRTUAL SCHOLARS SOCIETY</textPath>
+    </text>
+  </g>
+
+  
+  <g fill="#8f2638">
+    <path d="M30 100 l3 -3 l3 3 l-3 3 z"></path>
+    <path d="M164 100 l3 -3 l3 3 l-3 3 z"></path>
+  </g>
+
+  
+  <g>
+    <path d="M100 72 L136 87 L100 102 L64 87 Z" fill="#14152b"></path>
+    <path d="M82 93 L82 106 Q100 117 118 106 L118 93" stroke="#14152b" stroke-width="3.2" fill="none" stroke-linecap="round"></path>
+    <circle cx="100" cy="87" r="3.4" fill="#bf9b53"></circle>
+    <path d="M100 87 L131 87 L131 118" stroke="#bf9b53" stroke-width="2" fill="none"></path>
+    <path d="M131 116 l3.4 0 l-1.7 9 z" fill="#bf9b53"></path>
+    <circle cx="131" cy="118" r="2.4" fill="#bf9b53"></circle>
+  </g>
+
+  
+  <text x="100" y="128" text-anchor="middle" font-family="&#39;IBM Plex Mono&#39;,monospace" font-size="7" letter-spacing="2" fill="#8c7c5a">M.A. · M.S. · Ph.D.</text>
+</svg>

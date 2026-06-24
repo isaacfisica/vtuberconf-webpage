@@ -1,0 +1,32 @@
+import type { Member } from '../types';
+
+import aha from './aha';
+import alo from './alo';
+import chika from './chika';
+import dalhyein from './dalhyein';
+import danwoo from './danwoo';
+import eva from './eva';
+import gominha from './gominha';
+import gwimasa from './gwimasa';
+import hampoke from './hampoke';
+import isaac from './isaac';
+import jamie from './jamie';
+import jefty from './jefty';
+import kittel from './kittel';
+import lento from './lento';
+import livetrack from './livetrack';
+import malon from './malon';
+import okkoming from './okkoming';
+import paduck from './paduck';
+import robin from './robin';
+import rona from './rona';
+import saedam from './saedam';
+import seig from './seig';
+import serin from './serin';
+import sonicwater from './sonicwater';
+import vivace from './vivace';
+import yeonhu from './yeonhu';
+import yubora from './yubora';
+import yuno from './yuno';
+
+export const MEMBERS: Member[] = [aha, alo, chika, dalhyein, danwoo, eva, gominha, gwimasa, hampoke, isaac, jamie, jefty, kittel, lento, livetrack, malon, okkoming, paduck, robin, rona, saedam, seig, serin, sonicwater, vivace, yeonhu, yubora, yuno];
