@@ -3,10 +3,10 @@ import type { Member } from '../types';
 const serin: Member = {
   id: 'serin',
   name: '세린',
-  field: '생물공학 (미생물·대사공학·분자생물학)',
+  field: '생명공학 (미생물·대사공학·분자생물학)',
   degree: '공학박사',
   deg: 'phd',
-  tags: ['생물학', '생물공학', '분자생물학'],
+  tags: ['생물학', '생명공학', '분자생물학'],
   role: '정회원',
   joined: '2026.03',
   bio: '미생물과 대사공학을 다루는 생물공학 박사입니다.',
