@@ -102,7 +102,7 @@ export default function MemberCard({ member: m }: { member: Member }) {
         </div>
       )}
       <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
-        <Avatar name={first} size={56} live={m.live} degree={m.live ? undefined : m.degree} />
+        <Avatar name={first} size={56} live={m.live} degree={ undefined} />
         <div style={{ minWidth: 0 }}>
           <div
             style={{
