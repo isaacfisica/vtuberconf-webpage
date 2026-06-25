@@ -123,7 +123,7 @@ export default function ProfilePage({ member: m, members }: Props) {
         {/* Left */}
         <div>
           <EyebrowLabel mb={12}>자기소개</EyebrowLabel>
-          <p style={{ fontSize: 16.5, lineHeight: 1.85, color: 'var(--text-primary)', margin: '0 0 18px' }}>
+          <p style={{ fontSize: 16.5, lineHeight: 1.85, color: 'var(--text-primary)', margin: '0 0 18px', whiteSpace: 'pre-line' }}>
             {m.bioLong}
           </p>
           {(m.tags?.length ?? 0) > 0 && (
