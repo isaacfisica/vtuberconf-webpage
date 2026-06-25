@@ -90,7 +90,7 @@ export default function ProfilePage({ member: m, members }: Props) {
                 {m.name}
               </h1>
               <div style={{ display: 'flex', alignItems: 'center', gap: 10, flexWrap: 'wrap' }}>
-                <Badge variant="degree" size="lg">{m.degree}</Badge>
+                {/* <Badge variant="degree" size="lg">{m.degree}</Badge> */}
                 <span
                   style={{
                     fontFamily: 'var(--font-sans)',
