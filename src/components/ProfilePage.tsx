@@ -9,25 +9,11 @@ import Card from '@/components/ui/Card';
 import Tag from '@/components/ui/Tag';
 import { EyebrowLabel } from '@/lib/blocks';
 import { RadialGlow } from '@/lib/cosmetics';
+import { SNS_META, WebsiteIcon } from '@/lib/icons';
 
 type Props = {
   member: Member;
   members: Member[];
-};
-
-const SNS_COLORS: Record<string, string> = {
-  X: '#14152b',
-  Twitter: '#14152b',
-  YouTube: '#e23b2e',
-  Twitch: '#7350d6',
-  Chzzk: '#03c75a',
-};
-const SNS_GLYPHS: Record<string, string> = {
-  X: '𝕏',
-  Twitter: '𝕏',
-  YouTube: '▶',
-  Twitch: 'TW',
-  Chzzk: 'CZ',
 };
 
 export default function ProfilePage({ member: m, members }: Props) {
@@ -244,12 +230,16 @@ export default function ProfilePage({ member: m, members }: Props) {
           <Card title="SNS · 채널">
             <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
               {m.sns!.map((s) => {
-                const glyph = SNS_GLYPHS[s.kind] ?? s.kind.slice(0, 2);
-                const bg = SNS_COLORS[s.kind] ?? 'var(--ink-700)';
+                const meta = SNS_META[s.kind];
+                const Icon = meta?.Icon ?? WebsiteIcon;
+                const bg = meta?.color ?? 'var(--ink-700)';
+                const iconColor = meta?.iconColor ?? '#fff';
                 return (
                   <a
                     key={s.kind}
                     href={s.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     style={{
                       display: 'flex',
                       alignItems: 'center',
@@ -271,18 +261,14 @@ export default function ProfilePage({ member: m, members }: Props) {
                         height: 30,
                         borderRadius: 8,
                         background: bg,
-                        color: '#fff',
+                        color: iconColor,
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        fontFamily: 'var(--font-sans)',
-                        fontSize: 12,
-                        fontWeight: 700,
                         flexShrink: 0,
-                        letterSpacing: 0,
                       }}
                     >
-                      {glyph}
+                      <Icon size={17} />
                     </span>
                     <span style={{ flex: 1, minWidth: 0 }}>
                       <span
