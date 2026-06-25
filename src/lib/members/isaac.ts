@@ -14,13 +14,14 @@ const isaac: Member = {
   bioLong:
     '이탈리아에서 실험 핵·입자물리학으로 박사과정에 재학 중입니다. 핵·입자물리 실험과 검출기 등 실험장치를 다루며, 학계에서 썩은지는 한 10년쯤 되었습니다.',
   sns: [
-    { kind: 'X', label: '@isaacfisica_kr', url: '#' },
-    { kind: 'YouTube', label: '@isaacfisica', url: '#' },
-    { kind: '치지직', label: '', url: 'https://chzzk.naver.com/271d3c1c873ad6e013f2524ea705045c' },
-    { kind: 'Website', label: '', url: 'https://isaacfisica.github.io' },
+    { kind: 'Twitter', label: '@isaacfisica_kr', url: 'https://twitter.com/isaacfisica_kr' },
+    { kind: 'X', label: '@isaacfisica_kr', url: 'https://x.com/isaacfisica_kr' },
+    { kind: 'YouTube', label: '@isaacfisica', url: 'https://youtube.com/@isaacfisica' },
+    { kind: 'Chzzk', label: '이삭아저씨', url: 'https://chzzk.naver.com/271d3c1c873ad6e013f2524ea705045c' },
+    { kind: 'Website', label: 'isaacfisica.github.io', url: 'https://isaacfisica.github.io' },
 
   ],
-  channel: { platform: '치지직', schedule: '게릴라', href: 'https://chzzk.naver.com/271d3c1c873ad6e013f2524ea705045c' },
+  channel: { platform: 'Chzzk', schedule: '게릴라', href: 'https://chzzk.naver.com/271d3c1c873ad6e013f2524ea705045c' },
 };
 
 export default isaac;
